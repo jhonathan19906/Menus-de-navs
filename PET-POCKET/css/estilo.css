@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: url(../img/perro_0.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    width: 100%;
+    background: #4E94AB;
+}
+#btn-menu{
+    display: none;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-right: 1px solid #fff;
+}
+header label:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.menu li{
+    text-align: center;
+    flex-grow: 1;
+    border-right: 1px solid #fff;
+}
+.menu li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+.menu li a{
+    display: block;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+/*los media son como un if en la programacion
+y se los usa en css*/
+@media (max-width: 768px){
+    header label {
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        background: #4E94AB;
+        width: 15%;
+        margin-left:-15%;
+        transition: all 0.5s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+}
